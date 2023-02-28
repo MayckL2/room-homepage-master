@@ -3,6 +3,10 @@
   font-family: sans-serif;
 }
 
+body {
+  background-color: black;
+}
+
 header {
   position: absolute;
   margin: 30px;
@@ -30,16 +34,41 @@ header ul li:hover {
 
 main:nth-of-type(1) {
   display: flex;
+  background-color: white;
+}
+main:nth-of-type(1) .imgMain {
+  width: 60vw;
+  height: 500px;
 }
 main:nth-of-type(1) .carr {
+  position: relative;
   width: 40vw;
-  height: 30vw;
-  border: solid;
+  height: 500px;
+  overflow: hidden;
+}
+main:nth-of-type(1) .carr .setas {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0px;
+  position: absolute;
+  bottom: 0px;
+  left: 30px;
+  height: 50px;
+  width: 50px;
+}
+main:nth-of-type(1) .carr .setas img {
+  background-color: black;
+  padding: 15px 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+main:nth-of-type(1) .carr .setas img:hover {
+  background-color: rgba(0, 0, 0, 0.671);
 }
 main:nth-of-type(1) .carr div {
   width: 40vw;
-  height: 30vw;
-  border: solid;
+  height: 500px;
   font-weight: bold;
   display: flex;
   flex-direction: column;
@@ -63,7 +92,30 @@ main:nth-of-type(1) .carr div button {
   font-weight: bold;
   transition: all 0.5s;
   cursor: pointer;
+  width: 100%;
+  text-align: left;
+  margin-left: 30%;
 }
 main:nth-of-type(1) .carr div button:hover {
   opacity: 0.5;
+}
+
+main:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+main:nth-of-type(2) img {
+  height: 300px;
+}
+main:nth-of-type(2) div {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main:nth-of-type(2) div p {
+  opacity: 0.5;
+  width: 90%;
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */

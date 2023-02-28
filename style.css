@@ -1,0 +1,69 @@
+* {
+  margin: 0px;
+  font-family: sans-serif;
+}
+
+header {
+  position: absolute;
+  margin: 30px;
+  display: flex;
+  align-items: center;
+}
+header img {
+  width: 100px;
+}
+header ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  font-weight: bold;
+  color: white;
+}
+header ul li {
+  border-bottom: solid transparent;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+header ul li:hover {
+  border-bottom: solid white;
+}
+
+main:nth-of-type(1) {
+  display: flex;
+}
+main:nth-of-type(1) .carr {
+  width: 40vw;
+  height: 30vw;
+  border: solid;
+}
+main:nth-of-type(1) .carr div {
+  width: 40vw;
+  height: 30vw;
+  border: solid;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+main:nth-of-type(1) .carr div h1 {
+  font-size: 40px;
+  width: 70%;
+  text-align: left;
+}
+main:nth-of-type(1) .carr div p {
+  opacity: 0.5;
+  width: 70%;
+}
+main:nth-of-type(1) .carr div button {
+  background-color: transparent;
+  border: none;
+  letter-spacing: 10px;
+  font-weight: bold;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+main:nth-of-type(1) .carr div button:hover {
+  opacity: 0.5;
+}/*# sourceMappingURL=style.css.map */

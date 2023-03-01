@@ -27,8 +27,13 @@
   </head>
   <body>
     <header>
-      <img src="images/logo.svg" alt="" />
-      <ul>
+      <img onclick="hambur()" class="hambur" src="images/icon-hamburger.svg" alt="">
+      
+      <img class="logo" src="images/logo.svg" alt="" />
+      
+      <ul id="menu">
+        <img onclick="fecha()" class="close" src="images/icon-close.svg" alt="">
+
         <li>home</li>
         <li>shop</li>
         <li>about</li>
@@ -82,14 +87,12 @@
           <button>SHOP NOW <img src="images/icon-arrow.svg" alt="" /></button>
         </div>
 
-        <div class="setas">
-          <img onclick="prev()" src="images/icon-angle-left.svg" alt="">
-          <img onclick="next()" src="images/icon-angle-right.svg" alt="">
-        </div>
       </div>
 
-      
-
+      <div class="setas">
+        <img onclick="prev()" src="images/icon-angle-left.svg" alt="">
+        <img onclick="next()" src="images/icon-angle-right.svg" alt="">
+      </div>
     </main>
 
     <main>
@@ -112,11 +115,11 @@
     </main>
 
     <script src="script.js"></script>
-    <div class="attribution">
+    <div class="attribution" style="padding: 20px;">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="https://github.com/MayckL2">Mayck Luciano</a>.
     </div>
   </body>
 </html>

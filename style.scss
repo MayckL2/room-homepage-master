@@ -1,78 +1,124 @@
-*{
+* {
   margin: 0px;
   font-family: sans-serif;
 }
 
-body{
+body {
   background-color: black;
+  overflow-x: hidden;
 }
 
-header{
+header {
   position: absolute;
   margin: 30px;
   display: flex;
   align-items: center;
 
-  img{
+  @media (max-width: 600px) {
+    margin: 0px;
+
+    ul{
+      .close{
+        display: block;
+        cursor: pointer;
+      }
+
+      z-index: -1;
+      background-color: white;
+      color: black !important;
+      position: absolute;
+      top: 0px;
+      width: 88vw;
+      height: 100px;
+      align-items: center;
+    }
+
+    .hambur{
+      display: block !important;
+      cursor: pointer;
+      top: 5px;
+    }
+
+    .logo{
+      top: 30px;
+      left: 40vw;
+    }
+  }
+
+  .close{
+    display: none;
+    scale: 1.5;
+  }
+
+  .hambur{
+    display: none;
+    width: 50px;
+    padding: 20px;
+    position: absolute;
+  }
+  .logo {
+    position: relative;
     width: 100px;
   }
 
-  ul{
+  ul {
     display: flex;
     list-style: none;
     gap: 30px;
     font-weight: bold;
     color: white;
 
-    li{
+    li {
       border-bottom: solid transparent;
       transition: all 0.5s;
       cursor: pointer;
     }
-    li:hover{
-      border-bottom: solid white;
+
+    li:hover {
+      border-bottom: solid;
     }
   }
 }
 
-main:nth-of-type(1){
+main:nth-of-type(1) {
   display: flex;
   background-color: white;
 
-  .imgMain{
+  @media (max-width: 1100px) {
+    flex-direction: column !important;
+
+    .imgMain {
+      width: 100% !important;
+    }
+
+    .carr {
+      width: 100% !important;
+      border: solid;
+
+      div {
+        width: 100% !important;
+      }
+    }
+
+    .setas {
+      right: 25% !important;
+      bottom: 110px !important;
+      scale: 1.5;
+    }
+  }
+
+  .imgMain {
     width: 60vw;
     height: 500px;
   }
-  
-  .carr{
+
+  .carr {
     position: relative;
     width: 40vw;
     height: 500px;
     overflow: hidden;
-    
-    .setas{
-      display: flex;
-      align-items: center;
-      flex-direction: row;
-      gap: 0px;
-      position: absolute;
-      bottom: 0px;
-      left: 30px;
-      height: 50px;
-      width: 50px;
 
-      img{
-        background-color: black;
-        padding: 15px 20px;
-        transition: all 0.5s;
-        cursor: pointer;
-      }
-      img:hover{
-        background-color: rgba(0, 0, 0, 0.671);
-      }
-    }
-
-    div{
+    div {
       width: 40vw;
       height: 500px;
       font-weight: bold;
@@ -82,18 +128,18 @@ main:nth-of-type(1){
       justify-content: center;
       gap: 30px;
 
-      h1{
+      h1 {
         font-size: 40px;
         width: 70%;
         text-align: left;
       }
 
-      p{
+      p {
         opacity: 0.5;
         width: 70%;
       }
 
-      button{
+      button {
         background-color: transparent;
         border: none;
         letter-spacing: 10px;
@@ -104,33 +150,70 @@ main:nth-of-type(1){
         text-align: left;
         margin-left: 30%;
       }
-      button:hover{
+
+      button:hover {
         opacity: 0.5;
       }
     }
 
   }
 
+  .setas {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0px;
+    position: absolute;
+    bottom: 97px;
+    right: 34.5vw;
+    height: 50px;
+    width: 50px;
+
+    img {
+      background-color: black;
+      padding: 15px 20px;
+      transition: all 0.5s;
+      cursor: pointer;
+    }
+
+    img:hover {
+      background-color: rgba(0, 0, 0, 0.671);
+    }
+  }
 }
 
-main:nth-of-type(2){
+main:nth-of-type(2) {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   background-color: white;
 
-  img{
-    height: 300px;
+  @media (max-width: 1000px) {
+    flex-direction: column !important;
+
+    img{
+      width: 100%!important;
+    }
+
+    div{
+      width: 100% !important;
+      height: 300px;
+      justify-content: center;
+    }
   }
 
-  div{
+  img {
+    height: 300px;
+    width: 33vw;
+  }
+
+  div {
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-  
-    
+    width: 33vw;
 
-    p{
+    p {
       opacity: 0.5;
       width: 90%;
       font-weight: bold;

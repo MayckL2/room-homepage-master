@@ -5,6 +5,7 @@
 
 body {
   background-color: black;
+  overflow-x: hidden;
 }
 
 header {
@@ -13,7 +14,46 @@ header {
   display: flex;
   align-items: center;
 }
-header img {
+@media (max-width: 600px) {
+  header {
+    margin: 0px;
+  }
+  header ul {
+    z-index: -1;
+    background-color: white;
+    color: black !important;
+    position: absolute;
+    top: 0px;
+    width: 88vw;
+    height: 100px;
+    align-items: center;
+  }
+  header ul .close {
+    display: block;
+    cursor: pointer;
+  }
+  header .hambur {
+    display: block !important;
+    cursor: pointer;
+    top: 5px;
+  }
+  header .logo {
+    top: 30px;
+    left: 40vw;
+  }
+}
+header .close {
+  display: none;
+  scale: 1.5;
+}
+header .hambur {
+  display: none;
+  width: 50px;
+  padding: 20px;
+  position: absolute;
+}
+header .logo {
+  position: relative;
   width: 100px;
 }
 header ul {
@@ -29,12 +69,32 @@ header ul li {
   cursor: pointer;
 }
 header ul li:hover {
-  border-bottom: solid white;
+  border-bottom: solid;
 }
 
 main:nth-of-type(1) {
   display: flex;
   background-color: white;
+}
+@media (max-width: 1100px) {
+  main:nth-of-type(1) {
+    flex-direction: column !important;
+  }
+  main:nth-of-type(1) .imgMain {
+    width: 100% !important;
+  }
+  main:nth-of-type(1) .carr {
+    width: 100% !important;
+    border: solid;
+  }
+  main:nth-of-type(1) .carr div {
+    width: 100% !important;
+  }
+  main:nth-of-type(1) .setas {
+    right: 25% !important;
+    bottom: 110px !important;
+    scale: 1.5;
+  }
 }
 main:nth-of-type(1) .imgMain {
   width: 60vw;
@@ -45,26 +105,6 @@ main:nth-of-type(1) .carr {
   width: 40vw;
   height: 500px;
   overflow: hidden;
-}
-main:nth-of-type(1) .carr .setas {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  gap: 0px;
-  position: absolute;
-  bottom: 0px;
-  left: 30px;
-  height: 50px;
-  width: 50px;
-}
-main:nth-of-type(1) .carr .setas img {
-  background-color: black;
-  padding: 15px 20px;
-  transition: all 0.5s;
-  cursor: pointer;
-}
-main:nth-of-type(1) .carr .setas img:hover {
-  background-color: rgba(0, 0, 0, 0.671);
 }
 main:nth-of-type(1) .carr div {
   width: 40vw;
@@ -99,20 +139,55 @@ main:nth-of-type(1) .carr div button {
 main:nth-of-type(1) .carr div button:hover {
   opacity: 0.5;
 }
+main:nth-of-type(1) .setas {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0px;
+  position: absolute;
+  bottom: 97px;
+  right: 34.5vw;
+  height: 50px;
+  width: 50px;
+}
+main:nth-of-type(1) .setas img {
+  background-color: black;
+  padding: 15px 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+main:nth-of-type(1) .setas img:hover {
+  background-color: rgba(0, 0, 0, 0.671);
+}
 
 main:nth-of-type(2) {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   background-color: white;
+}
+@media (max-width: 1000px) {
+  main:nth-of-type(2) {
+    flex-direction: column !important;
+  }
+  main:nth-of-type(2) img {
+    width: 100% !important;
+  }
+  main:nth-of-type(2) div {
+    width: 100% !important;
+    height: 300px;
+    justify-content: center;
+  }
 }
 main:nth-of-type(2) img {
   height: 300px;
+  width: 33vw;
 }
 main:nth-of-type(2) div {
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 33vw;
 }
 main:nth-of-type(2) div p {
   opacity: 0.5;

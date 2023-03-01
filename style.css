@@ -75,8 +75,10 @@ header ul li:hover {
 main:nth-of-type(1) {
   display: flex;
   background-color: white;
+  position: relative;
+  z-index: -1;
 }
-@media (max-width: 1100px) {
+@media (max-width: 800px) {
   main:nth-of-type(1) {
     flex-direction: column !important;
   }
@@ -91,8 +93,8 @@ main:nth-of-type(1) {
     width: 100% !important;
   }
   main:nth-of-type(1) .setas {
-    right: 25% !important;
-    bottom: 110px !important;
+    right: 20% !important;
+    bottom: 520px !important;
     scale: 1.5;
   }
 }
@@ -145,8 +147,8 @@ main:nth-of-type(1) .setas {
   flex-direction: row;
   gap: 0px;
   position: absolute;
-  bottom: 97px;
-  right: 34.5vw;
+  bottom: 0px;
+  right: 36%;
   height: 50px;
   width: 50px;
 }

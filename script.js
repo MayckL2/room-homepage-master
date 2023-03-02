@@ -26,9 +26,9 @@ function prev() {
 }
 
 function hambur() {
-  menu.style.zIndex = "1"
+  menu.style.top = "0px"
 }
 
 function fecha(){
-  menu.style.zIndex = "-1"
+  menu.style.top = "-100px"
 }

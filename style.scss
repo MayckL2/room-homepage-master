@@ -13,21 +13,22 @@ header {
   margin: 30px;
   display: flex;
   align-items: center;
+  z-index: 1;
 
   @media (max-width: 600px) {
     margin: 0px;
-
+    
     ul{
       .close{
         display: block;
         cursor: pointer;
       }
 
-      z-index: -1;
+
       background-color: white;
       color: black !important;
       position: absolute;
-      top: 0px;
+      top: -100px;
       width: 88vw;
       height: 100px;
       align-items: center;
@@ -84,7 +85,6 @@ main:nth-of-type(1) {
   display: flex;
   background-color: white;
   position: relative;
-  z-index: -1;
 
   @media (max-width: 800px) {
     flex-direction: column !important;
